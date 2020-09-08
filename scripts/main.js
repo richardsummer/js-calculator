@@ -6,18 +6,20 @@
 // Logs the value attribute of an HTML element.
 
 function pushNumber(event) {
-  alert(event.target.value);
+  // alert(event.target.value);
+  calculation.push(event.target.value);
+  console.log(calculation);
   }
 
 // Gets the buttons from HTML and returns a NodeList.
 
-const buttons = document.querySelectorAll('.number');
+const numbers = document.querySelectorAll('.number');
 
 // Iterates over each item in the NodeList.
 // Listens for click event and logs an alert with
 // the number of the button clicked to the console.
 
-buttons.forEach(function(button) {
+numbers.forEach(function(button) {
    button.addEventListener('click', pushNumber);
 });
 
@@ -25,7 +27,9 @@ buttons.forEach(function(button) {
 // Logs the value attribute of an HTML element.
 
 function pushOperator(event) {
-  alert(event.target.value);
+  // alert(event.target.value);
+  calculation.push(event.target.value);
+  console.log(calculation);
 }
 
 // Gets the buttons from HTML and returns a NodeList.
@@ -44,7 +48,7 @@ operatorButtons.forEach(function(button) {
 // Logs the value attribute of an HTML element.
 
 function calculate(event) {
-  alert(event.target.value);
+  // alert(event.target.value);
 }
 
 // Gets the buttons from HTML and returns a NodeList.
@@ -59,8 +63,13 @@ equalSign.forEach(function(button) {
    button.addEventListener('click', calculate);
 });
 
-
+// * Using `Array.prototype.push`, perform actions
+// on the `calculation` variable when numbers and
+// operators are pressed
 
 const calculation = [];
 
-Array.prototype.push(buttons);
+const result = function myFunction(calculation){
+  for(let i = 0; i < calculation.length; i++){
+  }
+}
